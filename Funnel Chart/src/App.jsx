@@ -2,7 +2,7 @@
 
 import {
   FunnelChart, Funnel,
-  XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  Tooltip,
   ResponsiveContainer
 } from "recharts";
 

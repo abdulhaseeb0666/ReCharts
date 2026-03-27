@@ -3,7 +3,7 @@
 import {
   ComposedChart,
   Bar, Line,
-  XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  XAxis, YAxis, Tooltip,
   ResponsiveContainer
 } from "recharts";
 

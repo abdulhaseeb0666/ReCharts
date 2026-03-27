@@ -2,7 +2,7 @@
 
 import {
   PieChart, Pie, Cell,
-  XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  Tooltip,
   ResponsiveContainer
 } from "recharts";
 
