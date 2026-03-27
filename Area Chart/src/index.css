@@ -8,3 +8,13 @@
 h1{
   text-align: center;
 }
+
+select{
+  height: fit-content;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+}

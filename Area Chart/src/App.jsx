@@ -1,9 +1,9 @@
-"use client";
 
+import { useState } from "react";
 import {
   AreaChart, Area,
   XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -17,16 +17,36 @@ const data = [
 
 
 export default function App() {
+
+  const [graph, setgraph] = useState("uv");
+
+  const datagraph = (e) => {
+    setgraph(e.target.value);
+  }
+
+
   return (
     <div>
       <h1>Area Chart</h1>
-        <ResponsiveContainer width="100%" height={300}>
-          <AreaChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
+
+      <select name="datakey" id="" onChange={datagraph}>
+        <option value="uv">uv</option>
+        <option value="pv">pv</option>
+      </select>
+
+        <ResponsiveContainer width="100%" height="500">
+          <AreaChart data={data} margin={{right: "10"}}>
+            <CartesianGrid strokeDasharray="5 5" />
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Area type="monotone" dataKey="pv" stroke="#8884d8" fill="#8884d8" />
+            {
+              graph === "uv" ? (
+                <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+              ) : (
+                <Area type="monotone" dataKey="pv" stroke="#8884d8" fill="#8884d8" />
+              )
+            }
           </AreaChart>
         </ResponsiveContainer>      
     </div>

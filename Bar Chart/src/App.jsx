@@ -1,5 +1,3 @@
-"use client";
-
 import {
   BarChart, Bar,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend,
@@ -25,7 +23,7 @@ export default function App() {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip />
+          <Tooltip contentStyle={{background : "rgba(106, 62, 159, 0.37)" , border : "1px solid rgba(106, 62, 159, 1)", color : "#fff" , fontWeight : "bold"}} itemStyle={{ }} />
           <Legend />
           <Bar dataKey="pv" fill="#8884d8" />
           <Bar dataKey="uv" fill="#82ca9d" />
